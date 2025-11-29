@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevStore | Portfolio & Shop</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Icon Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">Dev<span>Store</span>.</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">Tentang</a></li>
+            <li><a href="#store">Toko</a></li>
+        </ul>
+        <div class="cart-icon" onclick="toggleCart()">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cart-count">0</span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home">
+        <div class="hero-content">
+            <h1>Solusi Digital & <br><span>Web Development</span></h1>
+            <p>Membangun website modern dan menyediakan aset koding berkualitas.</p>
+            <a href="#store" class="btn">Lihat Produk</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>Tentang Developer</h2>
+        <div class="skills">
+            <div class="skill-card">
+                <i class="fab fa-js"></i>
+                <h3>JavaScript</h3>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-node"></i>
+                <h3>Node.js</h3>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-react"></i>
+                <h3>React</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Store Section -->
+    <section id="store">
+        <h2>Produk & Layanan</h2>
+        <div class="product-grid" id="product-list">
+            <!-- Produk akan di-load lewat JavaScript -->
+            <div class="loading">Memuat produk...</div>
+        </div>
+    </section>
+
+    <!-- Cart Modal -->
+    <div class="cart-overlay" id="cart-overlay">
+        <div class="cart-box">
+            <div class="cart-header">
+                <h3>Keranjang Belanja</h3>
+                <button onclick="toggleCart()"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="cart-items" id="cart-items">
+                <p>Keranjang kosong.</p>
+            </div>
+            <div class="cart-footer">
+                <h3>Total: <span id="cart-total">Rp 0</span></h3>
+                <button class="btn-checkout" onclick="checkout()">Checkout via WA</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 DevStore. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
